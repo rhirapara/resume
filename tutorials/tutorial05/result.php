@@ -1,10 +1,11 @@
 <?php
 
-    echo "<pre>";
-    print([$_POST]);
-    echo "</pre>";
+    // echo "<pre>";
+    // print_r([$_POST]);
+    // echo "</pre>";
 
     $val=$_POST['month'];
+  //  echo $val;
 ?>
 
 <!DOCTYPE html>
@@ -18,20 +19,34 @@
 
 </head>
 <body>
-              <select name="" id="">
+  
+<style>
+
+.sele{
+    margin-left:250px;
+    margin-top:150px;
+}
+h3{
+  color:green;
+}
+</style>
+<div class="sele">
+ 
+<h3>Selected Month Is</h3>  <select name="" id="">
                 <option >select month</option>
-                <option <?php ?>>January</option>
-                <option >February</option>
-                <option >March</option>
-                <option >April</option>
-                <option >May</option>
-                <option >June</option>
-                <option >July</option>
-                <option >August</option>
-                <option >September</option>
-                <option >October</option>
-                <option >November</option>
-                <option >December</option>
+                <option <?php  if($val==1) echo "Selected"; ?>>January</option>
+                <option <?php  if($val==2) echo "Selected"; ?>>February</option>
+                <option <?php  if($val==3) echo "Selected"; ?> >March</option>
+                <option <?php  if($val==4) echo "Selected"; ?>>April</option>
+                <option <?php  if($val==5) echo "Selected"; ?>>May</option>
+                <option <?php  if($val==6) echo "Selected"; ?>>June</option>
+                <option <?php  if($val==7) echo "Selected"; ?>>July</option>
+                <option <?php  if($val==8) echo "Selected"; ?>>August</option>
+                <option <?php  if($val==9) echo "Selected"; ?>>September</option>
+                <option <?php  if($val==10) echo "Selected"; ?>>October</option>
+                <option <?php  if($val==11) echo "Selected"; ?>>November</option>
+                <option <?php  if($val==12) echo "Selected"; ?>>December</option>
             </select>
+</div>
 </body>
 </html>
